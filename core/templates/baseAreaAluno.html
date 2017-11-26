@@ -40,5 +40,24 @@
         </article>
     </header>
 
+    <section class="containerPai">
+        <article class="containerFilho">
+            <nav class="menuAdmin">
+                <h2 class="menuTitulo">Acesso Rapido</h2>
+                <ul>
+                    <li><a href="/areaAluno">Dashboard</a></li>
+                    <li><a href="/areaAlunoBoletim">Boletim</a></li>
+                    <li><a href="/testeOnline">Teste Online</a></li>
+                    <li><a href="/areaAlunoContatoProfessor">Contato Professor</a></li>
+                    <li><a href="/areaAlunoSmartClass1">Smart Class</a></li>
+                </ul>
+            </nav>
+            <main>
+                {% block main %}
+                {% endblock %}
+            </main>
+        </article>
+    </section>
+
 </body>
 </html>

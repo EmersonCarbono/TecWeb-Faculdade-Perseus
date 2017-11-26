@@ -82,3 +82,57 @@ p, a {
 .b {
     padding: 53px 0;
 }
+
+.containerPai {
+    width: 100%;
+}
+
+.containerFilho {
+    display: grid;
+    width: 1170px;
+    grid-template-columns: 20% 80%;
+    margin: 0 auto;
+}
+
+.menuTitulo {
+    padding: 10px 10px;
+}
+
+.menuAdmin {
+    width: 100%;
+    background-color: #525252;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.menuAdmin ul {
+    list-style: none;
+}
+
+.menuAdmin ul li {
+    padding: 10px 10px;
+}
+
+.menuAdmin ul li a {
+    text-decoration: none;
+}
+
+.menuAdmin ul li a:hover {
+    transition: .9s ease;
+    color: #ff8c00;
+}
+
+    @media screen and (max-width: 1170px)
+    {
+        .containerFilho {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 760px)
+    {
+        .containerFilho {
+            width: 100%;
+            grid-template-columns: 100%;
+        }
+    }
