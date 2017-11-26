@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Nome do Curso{% endblock %}
 {% block cssLink %}detalheCurso.css{% endblock %}
-<script src="../static/js/script.js"></script>
 
 {% block content %}
     <section class="slide">
@@ -9,45 +8,19 @@
     </section>
     <section class="container">
         <article class="sobreCurso">
-            <h1>{{ curso }}</h1>
-            <p>{{ curso.descricao_completa }}</p>
-           <!-- <div class="horarioCalendario">
-                    <p><strong>Periodo:</strong><br /> Noturno</p>
-                <img src="../static/img/relogioIcon.png" alt="icon horario" width="60px" />
-                <p><strong>Tempo:</strong><br /> 4 Semestre</p>
-                <img src="../static/img/calendarioIcon.png" alt="icon calendario" width="60px" />
-                
-            </div>-->
+            <h1>{{ curso_obj }}</h1>
+            <p>{{ curso_obj.descricao_completa }}</p>
         </article>
-        <article    class="gradeCurso">
+        <article class="gradeCurso">
             <h1>Grade do Curso</h1>
-            <button onclick="myFunction1()" class="semestre">1º Semestre</button>
-            <div class="disciplina" id="disciplina1">
-                <p><span>Tecnologia Web</span><br/ >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
-                <p><span>Tecnologia Web</span><br/ >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
-                <p><span>Tecnologia Web</span><br/ >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
-            </div>
-            <button onclick="myFunction2()" class="semestre">2º Semestre</button>
-            <div class="disciplina" id="disciplina2">
-                <p><span>Tecnologia Web</span><br/ >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
-                <p><span>Tecnologia Web</span><br/ >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
-                <p><span>Tecnologia Web</span><br/ >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
-            </div>
-            <button onclick="myFunction3()" class="semestre">3º Semestre</button>
-            <div class="disciplina" id="disciplina3">
-                <p><span>Tecnologia Web</span><br/ >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
-                <p><span>Tecnologia Web</span><br/ >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
-                <p><span>Tecnologia Web</span><br/ >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
-            </div>
+            {% for grade in grade_obj %}
+                <button class="semestre">{{ grade.semestre }}º Semestre</button>
+                <ul>
+                    {% for disciplina in disciplinas %}
+                        <li>{{ disciplina }}</li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
         </article>
     </section>
 

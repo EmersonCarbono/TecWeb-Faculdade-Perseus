@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required, user_passes_test
 
+from .models import Professor
+
 # Create your views here.
 def checa_aluno(user):
      return user.perfil == 'A'
@@ -18,7 +20,10 @@ def area_aluno_boletim(request):
 @login_required(login_url='/entrar')
 @user_passes_test(checa_aluno, login_url='/?error=acesso', redirect_field_name = None)
 def area_aluno_contato_professor(request):
-    return render(request, "areaAlunoContatoProfessor.html")
+    contexto = {
+        'professores': Professor.objects.all()
+    }
+    return render(request, "areaAlunoContatoProfessor.html", contexto)
 
 @login_required(login_url='/entrar')
 @user_passes_test(checa_aluno, login_url='/?error=acesso', redirect_field_name = None)

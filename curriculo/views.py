@@ -1,12 +1,18 @@
 from django.shortcuts import render
 
-from curriculo.models import Curso
+from curriculo.models import Curso, GradeCurricular, Periodo
 
 # Create your views here.
 #   Curso
 def curso(request, sigla):
+    curso = Curso.objects.get(sigla = sigla.upper())
+    grade =  GradeCurricular.objects.filter(curso = curso)
+    periodo = Periodo.objects.get(grade = grade)
+    disicplina = periodo.disciplinas.all()
     contexto = {
-        'curso': Curso.objects.get(sigla = sigla.upper())
+        'curso_obj': curso,
+        'grade_obj': grade,
+        'disciplinas': disicplina
         }
     return render(request,'curso.html', contexto)
 

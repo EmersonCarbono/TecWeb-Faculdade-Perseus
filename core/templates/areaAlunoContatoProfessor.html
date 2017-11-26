@@ -10,9 +10,11 @@
             <tr>
                 <th>Professor</th><th>Email</th><th>Telefone</th>
             </tr>
+            {% for professor in professores %}
             <tr>
-                <td>Yuri</td><td>yuri@yuri.com</td><td>1495-7824</td>
+                <td>{{ professor.nome }}</td><td>{{ professor.email }}</td><td>{{ professor.celular }}</td>
             </tr>
+            {% endfor%}
         </table>
     </div>
 
