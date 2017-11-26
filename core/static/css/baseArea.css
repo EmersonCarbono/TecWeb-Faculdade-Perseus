@@ -18,75 +18,67 @@ p, a {
     color: #fff;
 }
 
-button {
-    height: 33px;
-    border: 1px solid #ff8c00;
-    color: #fff;
+.topoPai {
+    width: 100%;
+    height: 124px;
+    background-color: #212121;
 }
 
-button:hover {
-    transition: .9s ease;
-    background-color: #ff8c00;
-}
-
-.container {
+.topoFilho {
     display: grid;
-    grid-template-columns: 20% 80%;
-    height: 1000px;
+    width: 1170px;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    margin: 0 auto;
 }
 
-.acessoRapido {
-    background-color: #3d3d3d;
-    padding: 20px 20px;
-}
-
-.acessoRapido img {
+.logo img {
     width: 200px;
+    margin: 7px 0;
 }
 
-.acessoRapido h2 {
-    margin: 20px 0
-}
-
-.acessoRapido nav ul {
+.menu ul, .login ul {
     list-style: none;
 }
 
-.acessoRapido nav ul li {
-    padding: 5px 0;
+.menu ul {
+    margin-left: 20%;
 }
 
-.acessoRapido nav ul li a {
+.menu ul li {
+    float: left;
+    padding: 53px 10px;
+}
+
+.menu ul li a, .login ul li a {
     text-decoration: none;
 }
 
-.acessoRapido nav ul li a:hover {
+.menu ul li a:hover, .login ul li a:hover {
     transition: .5s ease;
     color: #ff8c00;
 }
 
-.esquerdo {float: right;}
-
-.logado {
-    width: 100%;
-    height: 50px;
-    background-color: #3d3d3d;
-}
-
-.logado img {
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    background-color: #fff;
-    margin: 10px 10px;
-}
-
-.logado p {
-    margin: 17px 5px;
-}
-
-.logado button {
+.login ul li a img {
     width: 50px;
-    margin: 10px 10px;
-    background-color: #3d3d3d;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.login ul {
+    float: right;
+}
+
+.login ul li {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.a {
+    padding: 35px 0;
+}
+
+.b {
+    padding: 53px 0;
 }

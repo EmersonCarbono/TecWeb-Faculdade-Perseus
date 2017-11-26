@@ -9,8 +9,8 @@
 </head>
 <body>
 
-    <header class="headerPai">
-        <section class="headerFilho">
+    <header class="topoPai">
+        <article class="topoFilho">
             <div class="logo">
                 <img src="../static/img/logo_perseus_orange.png" alt="Logo Perseus" />
             </div>
@@ -19,20 +19,25 @@
                     <li><a href="../">Home</a></li>
                     <li><a href="/listacurso">Cursos</a></li>
                     <li><a href="/noticias">Noticias</a></li>
-                    {% if not user.is_authenticated %}
-                        <li><a href="/entrar">Login</a></li>
-                    {% else %}
-                        {% if user.perfil == 'A' %}
-                            <li><a href="/areaAluno">{{ user }}</a></li>
-                        {% elif user.perfil == 'P' %}
-                            <li><a href="/areaProfessor">{{ user }}</a></li>
-                        {% endif %}
-                            <li><a href="/sair">Sair</a></li>
-                    {% endif %}
-
                 </ul>
             </nav>
-        </section>
+            <nav class="login">
+                <ul>
+                    {% if not user.is_authenticated %}
+                        <li class="b"><a href="/entrar">Login</a></li>
+                    {% else %}
+                        {% if user.perfil == 'A' %}
+                            <li class="a"><a href=""><img src="logo_perseus_orange.png" alt="" /></a></li>
+                            <li class="b"><a href="/areaAluno">{{ user }}</a></li>
+                        {% elif user.perfil == 'P' %}
+                            <li class="a"><a href=""><img src="logo_perseus_orange.png" alt="" /></a></li>
+                            <li class="b"><a href="/areaProfessor">{{ user }}</a></li>
+                        {% endif %}
+                            <li class="b"><a href="/sair">Sair</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </article>
     </header>
 
     <main>
