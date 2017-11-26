@@ -19,6 +19,19 @@
     margin: 20px 10px;
 }
 
+button {
+    width: 80px;
+    height: 30px;
+    border: 1px solid #ff8c00;
+    background-color: #212121;
+    color: #fff;
+}
+
+button:hover {
+    transition: .5s ease;
+    background-color: #ff8c00;
+}
+
     @media screen and (max-width: 1024px)
     {
         .postClassPai {

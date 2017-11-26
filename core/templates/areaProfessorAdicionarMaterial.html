@@ -1,0 +1,24 @@
+{% extends  "baseAreaProfessor.html" %}
+{% block tituloArea %}Smart Class{% endblock %}
+{% block cssArea %}areaProfessorAdicionarMaterial.css{% endblock %}
+
+{% block main %}
+
+    <div class="adicionarMaterial">
+        <h1>Smart Class - Adicionar Material</h1>
+        <form method="POST" action="">
+            <label class="titulo">Data da Aula:</label><br/>
+            <input type="date" />
+            <br/>
+            <label class="titulo">Upload Aula:</label><br/>
+            <input type="file" />
+            <br/>
+            <label class="titulo">Upload Arquivo:</label><br/>
+            <input type="file" />
+            <br/>
+            <button type="submit" value="Enviar">Enviar</button>
+            <button type="reset" value="Limpar">Limpar</button>
+        </form>
+    </div>
+
+{% endblock %}
