@@ -54,3 +54,9 @@ def area_professor_smart_class1(request):
 
 def area_professor_smart_class2(request):
     return render(request, "areaProfessorSmartClass2.html")
+
+def area_professor_adicionar_material(request):
+    return render(request, "areaProfessorAdicionarMaterial.html")
+
+def area_professor_adicionar_boletim(request):
+    return render(request, "areaProfessorAdicionarBoletim.html")

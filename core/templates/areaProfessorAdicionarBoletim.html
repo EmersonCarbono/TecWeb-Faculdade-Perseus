@@ -1,0 +1,24 @@
+{% extends  "baseAreaProfessor.html" %}
+{% block tituloArea %}Boletim{% endblock %}
+{% block cssArea %}areaProfessorAdicionarBoletim.css{% endblock %}
+
+{% block main %}
+
+    <div class="adicionarBoletim">
+        <h1>Smart Class - Adicionar Nota</h1>
+        <form method="POST" action="">
+            <label class="titulo">Nome do Aluno:</label><br/>
+            <input type="text" />
+            <br/>
+            <label class="titulo">Nota 1:</label><br/>
+            <input type="text" />
+            <br/>
+            <label class="titulo">Nota 2:</label><br/>
+            <input type="text" />
+            <br/>
+            <button type="submit" value="Enviar">Enviar</button>
+            <button type="reset" value="Limpar">Limpar</button>
+        </form>
+    </div>
+
+{% endblock %}
