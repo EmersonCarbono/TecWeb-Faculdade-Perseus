@@ -1,0 +1,21 @@
+{% extends  "baseAreaProfessor.html" %}
+{% block tituloArea %}Contato Professor{% endblock %}
+{% block cssArea %}areaProfessorContatoProfessor.css{% endblock %}
+
+{% block main %}
+
+    <div class="contatoProfessor">
+        <h1>Contato Professor</h1>
+        <table class="tabelaProfessores">
+            <tr>
+                <th>Professor</th><th>Email</th><th>Telefone</th>
+            </tr>
+            {% for professor in professores %}
+            <tr>
+                <td>{{ professor.nome }}</td><td>{{ professor.email }}</td><td>{{ professor.celular }}</td>
+            </tr>
+            {% endfor%}
+        </table>
+    </div>
+
+{% endblock %}

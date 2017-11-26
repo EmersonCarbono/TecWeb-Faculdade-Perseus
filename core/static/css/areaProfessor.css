@@ -1,0 +1,19 @@
+.mural {
+    margin: 20px 20px;
+}
+
+.mural h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.postMural {
+    width: 80%;
+    background-color: #3d3d3d;
+    padding: 10px 10px;    
+}
+
+.postTitulo {
+    color: #ff8c00;
+    margin-bottom: 10px;
+}
