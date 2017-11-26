@@ -136,3 +136,21 @@ footer {
             width: 100%;
         }
     }
+
+    @media screen and (max-width: 760px)
+    {
+        .topoPai {
+            height: 350px;
+        }
+        .topoFilho {
+            width: 100%;
+            grid-template-columns: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .login ul {
+            float: none;
+            margin: 0 auto;
+        }
+    }

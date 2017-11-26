@@ -42,5 +42,10 @@ urlpatterns = [
     url(r'^areaAlunoSmartClass1/', area_aluno_smart_class1),
     url(r'^areaAlunoSmartClass2/', area_aluno_smart_class2),
 
-
+    #Area Professor
+    url(r'^areaProfessor/', area_professor, name = 'area_professor'),
+    url(r'^areaProfessorBoletim/', area_professor_boletim),
+    url(r'^areaProfessorContatoProfessor/', area_professor_contato_professor),
+    url(r'^areaProfessorSmartClass1/', area_professor_smart_class1),
+    url(r'^areaProfessorSmartClass2/', area_professor_smart_class2),
 ]

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block tituloArea %}{% endblock %} | Area do Professor</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/baseArea.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/{% block cssArea %}{% endblock %}" />
+</head>
+<body>
+
+    <header class="topoPai">
+        <article class="topoFilho">
+            <div class="logo">
+                <img src="../static/img/logo_perseus_orange.png" alt="Logo Perseus" />
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="../">Home</a></li>
+                    <li><a href="/listacurso">Cursos</a></li>
+                    <li><a href="/noticias">Noticias</a></li>
+                </ul>
+            </nav>
+            <nav class="login">
+                <ul>
+                    {% if not user.is_authenticated %}
+                        <li class="b"><a href="/entrar">Login</a></li>
+                    {% else %}
+                        {% if user.perfil == 'A' %}
+                            <li class="a"><a href=""><img src="logo_perseus_orange.png" alt="" /></a></li>
+                            <li class="b"><a href="/areaAluno">{{ user }}</a></li>
+                        {% elif user.perfil == 'P' %}
+                            <li class="a"><a href=""><img src="logo_perseus_orange.png" alt="" /></a></li>
+                            <li class="b"><a href="/areaProfessor">{{ user }}</a></li>
+                        {% endif %}
+                            <li class="b"><a href="/sair">Sair</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </article>
+    </header>
+
+    <section class="containerPai">
+        <article class="containerFilho">
+            <nav class="menuAdmin">
+                <h2 class="menuTitulo">Acesso Rapido</h2>
+                <ul>
+                    <li><a href="/areaProfessor">Dashboard</a></li>
+                    <li><a href="/areaProfessorBoletim">Boletim</a></li>
+                    <li><a href="/testeOnline">Teste Online</a></li>
+                    <li><a href="/areaProfessorContatoProfessor">Contato Professor</a></li>
+                    <li><a href="/areaProfessorSmartClass1">Smart Class</a></li>
+                </ul>
+            </nav>
+            <main>
+                {% block main %}
+                {% endblock %}
+            </main>
+        </article>
+    </section>
+
+</body>
+</html>
