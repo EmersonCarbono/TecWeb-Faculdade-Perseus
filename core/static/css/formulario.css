@@ -1,4 +1,5 @@
-.tituloFormulario {
+@import url('https://fonts.googleapis.com/css?family=Arimo:700|Questrial');
+/*.tituloFormulario {
 	font-size: 2em;
 	margin: 30px 0;
 }
@@ -32,10 +33,47 @@ textarea {
 	margin: 5px 0 20px 0;
 }
 
+formSpan
+
 .entrada {
 	width: 100%;
 }
 
+button {
+	width: 80px;
+	height: 40px;
+	margin-top: 20px;
+	font-size: 1em;
+}
+*/
+.container { 
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 50px;
+}
+.formularioFilho { 
+	border: 1px solid #ff8c00;
+	padding: 30px 30px;
+	box-shadow: 12px 10px 20px 5px;
+}
+
+input[type=text] { 
+	width: 100%;
+	margin: 5px 5px 5px 5px;
+}
+input[type=password] { 
+	width: 100%;
+	margin: 5px 5px 5px 5px;
+}
+.tituloEspaco { 
+	margin-bottom: 8px;
+}
+.tituloEspaco h1 { 
+ font-family: 'Questrial';
+ font-size: 1.5em;
+}
 button {
 	width: 80px;
 	height: 40px;
