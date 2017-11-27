@@ -4,14 +4,16 @@
 
 {% block content %}
     <section class="container">
-        <div class="titulo espaco">
+        <div class="tituloEspaco">
             <h1>Login</h1>
         </div>
         <section class="formularioPai">
-            <div class="formularioFlho">
+            <div class="formularioFilho">
                 <form method="POST" action="">
-                    {{ form.as_p }}
-                    {% csrf_token %}
+                    <span class="formSpan">
+                        {{ form.as_p }}
+                        {% csrf_token %}
+                    </span>
                     <button type="submit" value="Enviar">Enviar</button>
                     <button type="reset" value="Limpar">Limpar</button>
                 </form>
