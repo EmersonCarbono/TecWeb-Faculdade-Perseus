@@ -1,0 +1,25 @@
+{% extends  "baseArea.html" %}
+{% block tituloArea %}Smart Class{% endblock %}
+{% block cssArea %}testeOnline.css{% endblock %}
+<script src="../static/js/sendFile.js"></script>
+
+{% block contentArea %}
+
+<section class="sectionPai">
+    <div class="titulo">
+        <h1>Teste Online</h1>
+        <p>Envie suas tarefas para o professor</p>
+    </div>
+    <div class="form">
+        <form action="" method="POST">
+            <label for="Materia">Disciplina:</label>
+            <input type="text" placeholder="Materia"><br><br>
+            <!-- aqui é um form que contém varias disciplinas do curso do aluno  -->
+            <input name="testeAluno" type="file"><br><br>
+            <button type="submit" >ENVIAR</button>
+        </form>
+    </div>
+    
+</section>
+
+{% endblock %}
