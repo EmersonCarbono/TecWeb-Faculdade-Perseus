@@ -50,5 +50,4 @@ urlpatterns = [
     url(r'^areaProfessorSmartClass2/', area_professor_smart_class2),
     url(r'^areaProfessorAdicionarMaterial/', area_professor_adicionar_material),
     url(r'^areaProfessorAdicionarBoletim/', area_professor_adicionar_boletim),
-    url(r'^testeOnline/', teste_online)
 ]
