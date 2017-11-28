@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from core.models import Noticia
+from .models import Noticia
 
 # Create your views here.
 def index(request):
@@ -11,7 +11,11 @@ def noticias(request):
     }
     return render(request, "noticias.html", contexto)
 
-def noticia_post(request):
-    return render(request, 'noticiaPost.html')
+def noticia_post(request, titulo):
+    noticia = Noticia.objects.get(titulo = titulo.upper())
+    contexto = {
+        'noticia': noticia,
+    }
+    return render(request, 'noticiaPost.html', contexto)
 
 
