@@ -1,11 +1,9 @@
 {% extends "base.html" %}
-{% block title %}Nome do Curso{% endblock %}
+{% block title %}{{ curso_obj }}{% endblock %}
 {% block cssLink %}detalheCurso.css{% endblock %}
 
 {% block content %}
-    <section class="slide">
-        <p>{{ curso }}</p>
-    </section>
+    <section class="slide"></section>
     <section class="container">
         <article class="sobreCurso">
             <h1>{{ curso_obj }}</h1>
@@ -13,13 +11,17 @@
         </article>
         <article class="gradeCurso">
             <h1>Grade do Curso</h1>
-            {% for grade in grade_obj %}
-                <button class="semestre">{{ grade.semestre }}º Semestre</button>
+            {% for key, value in disciplinas.items %}
+                <button class="semestre">{{ key }}º Semestre</button>
                 <ul>
-                    {% for disciplina in disciplinas %}
-                        <li>{{ disciplina }}</li>
+                    {% for v in value %}
+                        <li>{{ v }}</li>
+                    {% empty %}
+                        <p>Ainda não tem disciplinas cadastradas</p>
                     {% endfor %}
                 </ul>
+            {% empty %}
+                <p>Ainda não te Grade Curricular de {{ curso_obj }}</p>
             {% endfor %}
         </article>
     </section>

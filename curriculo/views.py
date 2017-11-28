@@ -7,12 +7,19 @@ from curriculo.models import Curso, GradeCurricular, Periodo
 def curso(request, sigla):
     curso = Curso.objects.get(sigla = sigla.upper())
     grade =  GradeCurricular.objects.filter(curso = curso)
-    periodo = Periodo.objects.get(grade = grade)
-    disicplina = periodo.disciplinas.all()
+    
+    periodo = {}
+    for g in grade:
+        periodo[g.semestre] = Periodo.objects.get(grade = g)
+    
+    disciplinas = {}
+    for p in periodo.keys():
+        disciplinas[p] = periodo[p].disciplinas.all()
+            
+
     contexto = {
         'curso_obj': curso,
-        'grade_obj': grade,
-        'disciplinas': disicplina
+        'disciplinas': disciplinas
         }
     return render(request,'curso.html', contexto)
 
