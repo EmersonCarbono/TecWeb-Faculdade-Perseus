@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name = 'home'),
     url(r'^noticias/', noticias),
+    url(r'^noticiaPost/([A-Z, a-z]+)', noticia_post),
 
     #Curso
     url(r'^curso/([A-Z, a-z]+)', curso),

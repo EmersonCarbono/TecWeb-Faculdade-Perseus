@@ -29,3 +29,11 @@ class Resposta(models.Model):
 class ArquivoResposta(models.Model):
     respostas = models.ForeignKey(Resposta, null=False)
     arquivo = models.CharField(max_length=500, null=False)'''
+
+class Noticia(models.Model):
+    titulo = models.CharField(max_length=200, blank=False)
+    descricao_basica = models.CharField(max_length=250, blank=False)
+    descricao_completa = models.TextField(blank=False)
+
+    def __str__(self):
+        return self.titulo
